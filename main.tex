@@ -1,0 +1,145 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.11 (19/6/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{geometry}
+ \geometry{
+ letterpaper,
+ total={210mm,297mm},
+ left=10mm,
+ right=10mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Tanvir Ahmed} % Your first name
+\familyname{Khan} % Your last name
+
+
+\mobile{+1 7347735372} % Phone number
+\email{takh@umich.edu} % Email ID
+
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+\section{Research Interests}
+
+\cvitem{}{My areas of research concentration are software systems, programming languages, and wireless networking.}
+
+\section{Education}
+
+\cventry{2017-present}{Ph.D.}{\textit{University of Michigan}}{Ann Arbor, Michigan, USA}{}{}
+\cvlistdoubleitem{Computer Science and Engineering}{CGPA: 3.85/4.00}
+\cvlistitem{Advisor: Prof. Baris Kasikci}{}%\newline
+
+\cventry{2014-2017}{M.Sc.}{\textit{Bangladesh University of Engineering and Technology}}{Dhaka, Bangladesh}{}{}
+\cvlistdoubleitem{Computer Science and Engineering}{CGPA: 3.75/4.00}
+\cvlistitem{Thesis: Overcoming Throughput Degradation in Multi-Radio Cognitive Radio Networks}{}
+\cvlistitem{Advisor: Dr. A. B. M. Alim Al Islam}{}%\newline
+
+\cventry{2009-2014}{B.Sc.}{\textit{Bangladesh University of Engineering and Technology}}{Dhaka, Bangladesh}{}{}
+\cvlistdoubleitem{Computer Science and Engineering}{CGPA: 3.97/4.00}
+\cvlistitem{Thesis: Too Many Cooks Spoil the Broth: Augmenting Spectral Harvesting with Multiple Radios Can Make the Performance Worse!}{}
+\cvlistdoubleitem{Advisor: Dr. A. B. M. Alim Al Islam}{Class Rank: 1/153}%\newline
+
+\section{Publications}
+
+\cvitem{-}{\textbf{Tanvir Ahmed Khan}, Chowdhury Sayeed Hyder, and A. B. M. Alim Al Islam, Towards exploiting a synergy between cognitive and multi-radio networking. in proceedings of the 11 th IEEE International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), 2015, IEEE, Abu Dhabi, UAE, pages 370-377, 2015.}
+
+\cvitem{-}{\textbf{Tanvir Ahmed Khan} and A. B. M. Alim Al Islam, Poster: Overcoming Throughput Degradation in Multi-Radio Cognitive Radio Networks. in proceedings of the 14 th Annual International Conference on Mobile Systems, Applications, and Services (MobiSys) Companion, 2016, ACM, Singapore, Singapore, pages 41-41, 2016.}
+
+\section{Awards and Honors}
+
+\cvitem{2017-Present}{Rollin M. Gerstacker Foundation Fellowships, University of Michigan.}
+\cvitem{2016}{MobiSys 2016 Student Scholarship, Full conference registration, accommodation, and travel grant.}
+\cvitem{2014}{Crest of Honor, Highest CGPA in the department, presented by BUET alumni association.}
+\cvitem{2009-2014}{University Merit Scholarship, Bangladesh University of Engr and Tech.}
+\cvitem{2009-2014}{Dean's List Scholarship, Bangladesh University of Engr and Tech.}%\newline
+
+\section{Employment}
+
+\cventry{2017-present}{Research Assistant}{\textit{University of Michigan}}{Ann Arbor, Michigan, USA}{}{}
+\cvlistitem{Electrical Engineering and Computer Science Department.}{}%\newline
+
+\cventry{2014-2017}{Lecturer}{\textit{Bangladesh University of Engineering and Technology}}{Dhaka, Bangladesh}{}{}
+\cvlistitem{Department of Computer Science and Engineering.}{}
+\cvlistitem{Courses Taught: Data Communications, Operating Systems, Computer Architecture, Compiler.}{}% \newline
+
+\iffalse
+\cventry{2015-2016}{Part-time Lecturer}{\textit{Military Institute of Science and Technology}}{Dhaka, Bangladesh}{}{}
+\cvlistitem{Department of Computer Science and Engineering.}{}
+\cvlistitem{Courses Taught: Digital Electronics and Pulse Techniques Lab, Compiler Lab. \newline}{}
+\fi
+
+\section{Selected Research Projects}
+
+\cventry{2017-Present}{Feedback Directed Parallelization for Heterogeneous Systems}{}{}{}{Assigning computations to the correct processing unit is difficult because performance on heterogeneous systems maybe dominated by subtle effects that are hard to measure or anticipate through static analysis. In this project, we leveraged performance monitoring unit counters  to predict a computation's performance on different machines.}
+\cventry{2013-2017}{Performance Analysis for Multi-Radio Cognitive Radio Networks}{}{}{}{In this project, we analyzed several performance metrics (throughput, delay, packet-loss, etc.) in multi-radio cognitive radio networks. Consequently, we proposed a feedback-based multi-radio exploitation approach to overcome throughput degradation in multi-radio cognitive
+radio networks.}
+
+\section{Selected Course Projects}
+
+\cvitem{-}{Implementation of Machine Learning Algorithms (Decision tree, K-nearest neighbor, Bayesian inference, Neural networks) from scratch.}
+\cvitem{-}{Compiler for a Subset of Pascal Language.}
+%\cvitem{-}{Saint Basil's Cathedral using OpenGL.}
+\cvitem{-}{Implementation of OSI Layers over simulated Physical layer written in Java.}
+\cvitem{-}{Complete hardware implementation of a two-stage pipelined, micro-programmed microprocessor supporting 28 basic instructions.}
+
+\section{Industry Research Collaboration}
+
+\cventry{2016-2017}{Fraud Detection on Mobile Advertisement}{}{}{}{In collaboration with Widespace.}
+\cventry{2015-2017}{Early Detection of Terrorism from Social Media}{}{}{}{In collaboration with Infinity Technology and Bangladesh Police.}
+\cventry{2015-2016}{Target Audience Finding in Internet Advertisement}{}{}{}{In collaboration with Mindshare Bangladesh.}
+
+\section{Professional Services}
+\cvitem{-}{Data Center Consultation for NCC Bank, NRB Commercial Bank, Bangladesh Police.}
+\cvitem{-}{Web Application Security Assessment \& Load Testing for Bangladesh Hajj Pre-registration Server.}
+\cvitem{-}{Organizing Committee Member for NSysS 2016, WALCOM 2015, NSysS 2015.}
+\cvitem{-}{Online Result Processing for Country-wide Election for The Institution of Engineers, Bangladesh (IEB).}
+\cvitem{-}{Fraudulent Transaction Investigation for Sonali Bank Bangladesh.}
+\cvitem{-}{Member of Board of Undergraduate Studies, Self-Assessment Committee, Departmental Security Cell, Under-graduate Admission Programming Committee, Bureau of Research, Testing and Consultation Team, Dept. of Computer Science and Engineering, Bangladesh University of Engineering and Technology.}
+
+\section{Technical Skills}
+
+\cvitem{Languages}{C, C++, Java, x86 Assembly, PL/SQL, Tcl, Python, HTML, CSS, JavaScript, PHP, Shell script, Prolog.}
+\cvitem{Database Systems}{Oracle, MySQL.}
+%\cvitem{Operating Systems}{Variants of Linux and Windows.}
+\cvitem{Miscellaneous Tools}{NS-2, NS-3, SimPy, Flex/Bison, Spring, Android, Bootstrap, Arduino, TensorFlow, \LaTeX.}
+
+\end{document}
