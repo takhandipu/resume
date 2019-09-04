@@ -60,7 +60,7 @@
 
 \section{Research Interests}
 
-\cvitem{}{My areas of research concentration are software systems, programming languages, and wireless networking.}
+\cvitem{}{My research interest lies in the intersection of compiler, operating systems, and computer architecture.}
 
 \section{Education}
 
@@ -78,7 +78,7 @@
 \cvlistitem{Thesis: Too Many Cooks Spoil the Broth: Augmenting Spectral Harvesting with Multiple Radios Can Make the Performance Worse!}{}
 \cvlistdoubleitem{Advisor: Dr. A. B. M. Alim Al Islam}{Class Rank: 1/153}%\newline
 
-\section{Publications}
+\section{Selected Publications}
 
 \cvitem{-}{\textbf{Tanvir Ahmed Khan}, Yifan Zhao, Gilles Pokam, Barzan Mozafari, and Baris Kasikci, Huron: Hybrid False Detection and Repair. in proceedings of the 40\textsuperscript{th} ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI), ACM, Phoenix, Arizona, United States, pages 473-488, 2019.}
 
@@ -98,10 +98,16 @@
 \section{Employment}
 
 \cventry{2017-present}{Research Assistant}{\textit{University of Michigan}}{Ann Arbor, Michigan, USA}{}{}
+\cvlistitem{Advisor: Baris Kasikci}{}
 \cvlistitem{Electrical Engineering and Computer Science Department.}{}%\newline
+
+\cventry{Summer 2019}{Research Intern}{\textit{Microsoft}}{Redmond, Washington, USA}{}{}
+\cvlistitem{Mentor: Gagan Gupta and Rathijit Sen}
+\cvlistitem{Azure Hardware Research Group}{}%\newline
 
 \cventry{Winter 2019}{Graduate Student Instructor}{\textit{University of Michigan}}{Ann Arbor, Michigan, USA}{}{}
 \cvlistitem{Electrical Engineering and Computer Science Department.}{}
+\cvlistitem{Primary Instructor: Thomas Wenisch}{}
 \cvlistitem{Course: Parallel Computer Architecture.}{}% \newline
 
 \cventry{2014-2017}{Lecturer}{\textit{Bangladesh University of Engineering and Technology}}{Dhaka, Bangladesh}{}{}
@@ -114,13 +120,23 @@
 \cvlistitem{Courses Taught: Digital Electronics and Pulse Techniques Lab, Compiler Lab. \newline}{}
 \fi
 
+\section{Talks}
+\cventry{}{Huron: Hybrid False Sharing Detection and Repair}{}{}{}{}
+\cvlistitem{Microsoft C++ Team, August 2019}{}
+\cvlistitem{ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI), June 2019}{}
+\cvlistitem{Azure Hardware Research Group, May 2019}{}
+
+\cventry{}{Overcoming Throughput Degradation in Multi-Radio Cognitive Radio Networks}{}{}{}{}
+\cvlistitem{Intel Labs Wireless Networking Research Group, May 2018}{}
+
 \section{Selected Research Projects}
 
 %\cventry{2018-Present}{Many-Core Scalability for Existing File Systems}{}{}{}{As storage devices become significantly faster and processors become increasingly parallel, parallelizing file system operations becomes even more important to achieve high throughput for applications. However, most operations on today's popular file systems do not scale well on multi-core processors. For example, non-conflicting operations like directory listing, file creation, deletion, and renaming scale poorly only after 10 cores even on fastest storage devices.In this regard, we aim to design file system that could scale all non-conflicting operations without any hardware support.}
-%\cventry{2018-Present}{Continuous Locality Optimization}{}{}{}{Locality of reference is a key factor affecting a program's performance. However, very few programs exhibit good data locality during execution. In this project, we propose Erie, the first methodology that can continuously monitor executions in production for locality optimizations, with negligible overhead and without requiring special hardware. Using a hybrid approach, Erie efficiently identifies locality problems in production, and addresses them in house. Erie can reason about how its optimizations affect unobserved executions, as well as their interaction with underlying hardware mechanisms. Our evaluation shows that Erie's overhead is less than 1.36\% on average, and its optimizations provide up to 53.14\% (16.83\% on average) speedup, compared to a baseline that uses the highest level of compiler optimization. Erie provides up to 17.48\% (6.64\% on average) speedup on PostgreSQL, one of the most popular open-source data-base management systems.}
+\cventry{2019-Present}{Performance Characteristics of Managed Workloads}{}{}{}{Many modern applications are written in managed code to achieve type safety, portability, security, and automatic memory management. While these features provide necessary abstractions for quick and safe software development, computer architectural aspects of these features are not well studied in the literature. In this study, we investigate the characteristics of these managed workloads. We identify the key bottlenecks that significantly hurt the performance of these workloads on modern hardware. We also correlate these bottlenecks on different aspects of managed runtime including common shared libraries, garbage collection, and just in time code generation.}
+\cventry{2018-Present}{Continuous Locality Optimization}{}{}{}{Locality of reference is a key factor affecting a program's performance. However, very few programs exhibit good data locality during execution. In this project, we propose Erie, the first methodology that can continuously monitor executions in production for locality optimizations, with negligible overhead and without requiring special hardware. Using a hybrid approach, Erie efficiently identifies locality problems in production, and addresses them in house. Erie can reason about how its optimizations affect unobserved executions, as well as their interaction with underlying hardware mechanisms. Our evaluation shows that Erie's overhead is less than 1.36\% on average, and its optimizations provide up to 53.14\% (16.83\% on average) speedup, compared to a baseline that uses the highest level of compiler optimization. Erie provides up to 17.48\% (6.64\% on average) speedup on PostgreSQL, one of the most popular open-source data-base management systems.}
 \cventry{2017-2019}{Automatic False Sharing Elimination}{}{}{}{Parallel programs on shared memory multiprocessors suffer from a slowdown of an order of magnitude due to false sharing. False sharing occurs when multiple threads demand exclusive access to a cache line even though their data locate on non-overlapping portions of the cache line. In this project, we proposed Huron, a hybrid in-house/in-production false sharing detection and repair system. Huron detects and repairs as much false sharing as it can in-house, and relies on its lightweight in-production mechanism for remaining cases. The key idea behind Huron’s in-house false sharing repair is to group together data that is accessed by the same set of threads, to shift falsely-shared data to different cache lines. Huron's in-house repair technique can generalize to
 previously-unobserved inputs. Our evaluation shows that Huron can detect more false sharing bugs than all state-of-the-art techniques, and with a lower overhead. Huron improves runtime performance by 3.82$\times$ on average (up to 11$\times$), which is 2.11-2.27$\times$ better than the state of the art.}
-\cventry{2017-2018}{Feedback Directed Parallelization for Heterogeneous Systems}{}{}{}{Assigning computations to the correct processing unit is difficult because performance on heterogeneous systems maybe dominated by subtle effects that are hard to measure or anticipate through static analysis. In this project, we leveraged performance monitoring unit counters  to predict a computation's performance on different machines.}
+%\cventry{2017-2018}{Feedback Directed Parallelization for Heterogeneous Systems}{}{}{}{Assigning computations to the correct processing unit is difficult because performance on heterogeneous systems maybe dominated by subtle effects that are hard to measure or anticipate through static analysis. In this project, we leveraged performance monitoring unit counters  to predict a computation's performance on different machines.}
 \cventry{2013-2017}{Performance Analysis for Multi-Radio Cognitive Radio Networks}{}{}{}{In this project, we analyzed several performance metrics (throughput, delay, packet-loss, etc.) in multi-radio cognitive radio networks. Consequently, we proposed a feedback-based multi-radio exploitation approach to overcome throughput degradation in multi-radio cognitive
 radio networks.}
 
@@ -139,6 +155,8 @@ radio networks.}
 \cventry{2015-2016}{Target Audience Finding in Internet Advertisement}{}{}{}{In collaboration with Mindshare Bangladesh.}
 
 \section{Professional Services}
+\cvitem{-}{Artifact Evaluation Committee Member for SOSP 2019}
+\cvitem{-}{Student Volunteer for PLDI 2019}
 \cvitem{-}{Data Center Consultation for NCC Bank, NRB Commercial Bank, Bangladesh Police.}
 \cvitem{-}{Web Application Security Assessment \& Load Testing for Bangladesh Hajj Pre-registration Server.}
 \cvitem{-}{Organizing Committee Member for NSysS 2016, WALCOM 2015, NSysS 2015.}
@@ -146,11 +164,13 @@ radio networks.}
 \cvitem{-}{Fraudulent Transaction Investigation for Sonali Bank Bangladesh.}
 \cvitem{-}{Member of Board of Undergraduate Studies, Self-Assessment Committee, Departmental Security Cell, Under-graduate Admission Programming Committee, Bureau of Research, Testing and Consultation Team, Dept. of Computer Science and Engineering, Bangladesh University of Engineering and Technology.}
 
-\section{Technical Skills}
+\section{Research Mentoring}
+\cvitem{Undergraduate}{Yifan Zhao, Shariq Hafeez, Zhiqi Chen}
 
+\section{Technical Skills}
 \cvitem{Languages}{C, C++, Java, x86 Assembly, PL/SQL, Tcl, Python, HTML, CSS, JavaScript, PHP, Shell script, Prolog.}
-\cvitem{Database Systems}{Oracle, MySQL.}
+\cvitem{DB Systems}{PostgreSQL, MySQL, SQLite.}
 %\cvitem{Operating Systems}{Variants of Linux and Windows.}
-\cvitem{Miscellaneous Tools}{NS-2, NS-3, LLVM, Intel Pin, SimPy, Flex/Bison, OpenGL, Linux perf, Intel PMU tools, nvprof, pgprof, valgrind, Spring, Android, Bootstrap, Arduino, TensorFlow, \LaTeX.}
+\cvitem{Miscellaneous Tools}{NS-2, NS-3, LLVM, Intel Pin, SimPy, Awk, Flex/Bison, OpenGL, Linux perf, Intel PMU tools, Intel PT, nvprof, pgprof, valgrind, Spring, Android, Bootstrap, Arduino, TensorFlow, \LaTeX.}
 
 \end{document}
