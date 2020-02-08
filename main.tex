@@ -38,7 +38,11 @@
  top=20mm,
  bottom=20mm,
  }
+\usepackage{tikz}
+\usepackage{datetime}
 
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
@@ -55,6 +59,9 @@
 %----------------------------------------------------------------------------------------
 
 \begin{document}
+\begin{tikzpicture}[remember picture,overlay]
+      \node[anchor=north, yshift=-0.25cm] at (current page.north) {\textit{Last updated: \monthyeardate\today}};
+\end{tikzpicture}
 
 \makecvtitle % Print the CV title
 
@@ -87,6 +94,7 @@
 \cvitem{-}{\textbf{Tanvir Ahmed Khan}, Chowdhury Sayeed Hyder, and A. B. M. Alim Al Islam, Towards exploiting a synergy between cognitive and multi-radio networking. in proceedings of the 11\textsuperscript{th} IEEE International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), 2015, IEEE, Abu Dhabi, UAE, pages 370-377, 2015.}
 
 \section{Awards and Honors}
+\cvitem{2020}{Facebook Fellowship Finalist}
 \cvitem{2019}{PLMW@PLDI 2019 Student Scholarship covering conference registration, accommodation, and travel.}
 \cvitem{2017-2018}{Rollin M. Gerstacker Foundation Fellowships, University of Michigan.}
 \cvitem{2018}{OSDI 2018 Student Grant covering conference registration, accommodation, and travel.}
@@ -155,7 +163,7 @@ radio networks.}
 \cventry{2015-2016}{Target Audience Finding in Internet Advertisement}{}{}{}{In collaboration with Mindshare Bangladesh.}
 
 \section{Professional Services}
-\cvitem{-}{Artifact Evaluation Committee Member for PLDI 2020, ASPLOS 2020, SOSP 2019}
+\cvitem{-}{Artifact Evaluation Committee Member for PLDI 2020, MLSys 2020, ASPLOS 2020, SOSP 2019}
 \cvitem{-}{Student Volunteer for PLDI 2019}
 \cvitem{-}{Data Center Consultation for NCC Bank, NRB Commercial Bank, Bangladesh Police.}
 \cvitem{-}{Web Application Security Assessment \& Load Testing for Bangladesh Hajj Pre-registration Server.}
@@ -171,6 +179,6 @@ radio networks.}
 \cvitem{Languages}{C, C++, Java, x86 Assembly, PL/SQL, Tcl, Python, HTML, CSS, JavaScript, PHP, Shell script, Prolog.}
 \cvitem{DB Systems}{PostgreSQL, MySQL, SQLite.}
 %\cvitem{Operating Systems}{Variants of Linux and Windows.}
-\cvitem{Miscellaneous Tools}{NS-2, NS-3, LLVM, Intel Pin, SimPy, Awk, Flex/Bison, OpenGL, Linux perf, Intel PMU tools, Intel PT, nvprof, pgprof, valgrind, Spring, Android, Bootstrap, Arduino, TensorFlow, \LaTeX.}
+\cvitem{Miscellaneous Tools}{NS-2, NS-3, LLVM, Intel Pin, SimPy, ZSim, Awk, Flex/Bison, OpenGL, Linux perf, Intel PMU tools, Intel PT, nvprof, pgprof, valgrind, Spring, Android, Bootstrap, Arduino, TensorFlow, \LaTeX.}
 
 \end{document}
