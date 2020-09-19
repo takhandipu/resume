@@ -60,7 +60,7 @@
 
 \begin{document}
 \begin{tikzpicture}[remember picture,overlay]
-      \node[anchor=north, yshift=-0.25cm] at (current page.north) {\textit{Last updated: \monthyeardate\today}};
+  \node[anchor=north, yshift=-0.25cm] at (current page.north) {\textit{Last updated: \monthyeardate\today}};
 \end{tikzpicture}
 
 \makecvtitle % Print the CV title
@@ -73,6 +73,7 @@
 
 \cventry{2017-present}{Ph.D.}{\textit{University of Michigan}}{Ann Arbor, Michigan, USA}{}{}
 \cvlistdoubleitem{Computer Science and Engineering}{CGPA: 3.775/4.00}
+\cvlistitem{Thesis: Profile-guided Locality Optimization for Data Center Applications}{}
 \cvlistitem{Advisor: Prof. Baris Kasikci}{}%\newline
 
 \cventry{2014-2017}{M.Sc.}{\textit{Bangladesh University of Engineering and Technology}}{Dhaka, Bangladesh}{}{}
@@ -87,11 +88,15 @@
 
 \section{Selected Publications}
 
-\cvitem{-}{\textbf{Tanvir Ahmed Khan}, Yifan Zhao, Gilles Pokam, Barzan Mozafari, and Baris Kasikci, Huron: Hybrid False Detection and Repair. in proceedings of the 40\textsuperscript{th} ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI), ACM, Phoenix, Arizona, United States, pages 473-488, 2019.}
+\cvitem{MICRO'20}{\textbf{Tanvir Ahmed Khan}, Akshitha Sriraman, Joseph Devietti, Gilles Pokam, Heiner Litz, and Baris Kasikci, I-SPY: Context-Driven Conditional Instruction Prefetching with Coalescing. in proceedings of the 53\textsuperscript{rd} IEEE/ACM International Symposium on Microarchitecture (MICRO), IEEE, 2020.}
 
-\cvitem{-}{\textbf{Tanvir Ahmed Khan} and A. B. M. Alim Al Islam, Poster: Overcoming Throughput Degradation in Multi-Radio Cognitive Radio Networks. in proceedings of the 14\textsuperscript{th} Annual International Conference on Mobile Systems, Applications, and Services (MobiSys) Companion, 2016, ACM, Singapore, Singapore, pages 41-41, 2016.}
+\cvitem{IISWC'20}{Yuhan Chen, Jingyuan Zhu, \textbf{Tanvir Ahmed Khan}, and Baris Kasikci, CPU Microarchitectural Performance Characterization of Cloud Video Transcoding. in proceedings of the IEEE International Symposium on Workload Characterization (IISWC), IEEE, 2020.}
 
-\cvitem{-}{\textbf{Tanvir Ahmed Khan}, Chowdhury Sayeed Hyder, and A. B. M. Alim Al Islam, Towards exploiting a synergy between cognitive and multi-radio networking. in proceedings of the 11\textsuperscript{th} IEEE International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), 2015, IEEE, Abu Dhabi, UAE, pages 370-377, 2015.}
+\cvitem{PLDI'19}{\textbf{Tanvir Ahmed Khan}, Yifan Zhao, Gilles Pokam, Barzan Mozafari, and Baris Kasikci, Huron: Hybrid False Detection and Repair. in proceedings of the 40\textsuperscript{th} ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI), ACM, Phoenix, Arizona, United States, pages 473-488, 2019.}
+
+\cvitem{MobiSys'16}{\textbf{Tanvir Ahmed Khan} and A. B. M. Alim Al Islam, Poster: Overcoming Throughput Degradation in Multi-Radio Cognitive Radio Networks. in proceedings of the 14\textsuperscript{th} Annual International Conference on Mobile Systems, Applications, and Services (MobiSys) Companion, 2016, ACM, Singapore, Singapore, pages 41-41, 2016.}
+
+\cvitem{WiMob'15}{\textbf{Tanvir Ahmed Khan}, Chowdhury Sayeed Hyder, and A. B. M. Alim Al Islam, Towards exploiting a synergy between cognitive and multi-radio networking. in proceedings of the 11\textsuperscript{th} IEEE International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob), 2015, IEEE, Abu Dhabi, UAE, pages 370-377, 2015.}
 
 \section{Awards and Honors}
 \cvitem{2020}{Facebook Fellowship Finalist}
@@ -109,6 +114,10 @@
 \cvlistitem{Advisor: Baris Kasikci}{}
 \cvlistitem{Electrical Engineering and Computer Science Department.}{}%\newline
 
+\cventry{Summer 2020}{Software Engineer Intern}{\textit{Facebook}}{Menlo Park, California, USA}{}{}
+\cvlistitem{Mentor: Maksim Panchenko}
+\cvlistitem{Binary Optimization and Layout Tool (BOLT) Team}{}%\newline
+
 \cventry{Summer 2019}{Research Intern}{\textit{Microsoft}}{Redmond, Washington, USA}{}{}
 \cvlistitem{Mentor: Gagan Gupta and Rathijit Sen}
 \cvlistitem{Azure Hardware Research Group}{}%\newline
@@ -120,12 +129,12 @@
 
 \cventry{2014-2017}{Lecturer}{\textit{Bangladesh University of Engineering and Technology}}{Dhaka, Bangladesh}{}{}
 \cvlistitem{Department of Computer Science and Engineering.}{}
-\cvlistitem{Courses Taught: Operating Systems, Computer Architecture, Compiler, Data Communications.}{}% \newline
+\cvlistitem{Courses Taught: Operating Systems, Computer Architecture, Compiler.}{}% \newline
 
 \iffalse
-\cventry{2015-2016}{Part-time Lecturer}{\textit{Military Institute of Science and Technology}}{Dhaka, Bangladesh}{}{}
-\cvlistitem{Department of Computer Science and Engineering.}{}
-\cvlistitem{Courses Taught: Compiler Lab, Digital Electronics and Pulse Techniques Lab. \newline}{}
+  \cventry{2015-2016}{Part-time Lecturer}{\textit{Military Institute of Science and Technology}}{Dhaka, Bangladesh}{}{}
+  \cvlistitem{Department of Computer Science and Engineering.}{}
+  \cvlistitem{Courses Taught: Compiler Lab, Digital Electronics and Pulse Techniques Lab. \newline}{}
 \fi
 
 \section{Talks}
@@ -137,32 +146,35 @@
 \cventry{}{Overcoming Throughput Degradation in Multi-Radio Cognitive Radio Networks}{}{}{}{}
 \cvlistitem{Intel Labs Wireless Networking Research Group, May 2018}{}
 
+\newpage
 \section{Selected Research Projects}
 
-%\cventry{2018-Present}{Many-Core Scalability for Existing File Systems}{}{}{}{As storage devices become significantly faster and processors become increasingly parallel, parallelizing file system operations becomes even more important to achieve high throughput for applications. However, most operations on today's popular file systems do not scale well on multi-core processors. For example, non-conflicting operations like directory listing, file creation, deletion, and renaming scale poorly only after 10 cores even on fastest storage devices.In this regard, we aim to design file system that could scale all non-conflicting operations without any hardware support.}
+\cventry{2020-Present}{Profile-guided Binary Layout Optimization for Linux Kernel}{}{}{}{Many data center applications suffer from frequent instruction cache misses costing millions of dollars. While existing profile-guided optimization mechanisms can improve the instruction locality of user-mode instructions for these applications, no such technique exists for kernel-mode instructions. In this work, we first characterize the high percentage of instruction cache misses coming from kernel model instructions. Then, we enhance the state-of-the-art profile-guided optimization tool, BOLT to rewrite the Linux Kernel binary.}
+\cventry{2019-Present}{Context-Driven Conditional Instruction Prefetching with Coalescing for Data Center Applications}{}{}{}{Modern data center applications exhibit large instruction footprints, leading to frequent instruction cache misses increasing cost and degrading data center performance and energy efficiency. To overcome this performance degradation via prefetching, we first investigate the challenges of effective instruction prefetching. We then use insights derived from our investigation to develop I-SPY, a novel profile-guided prefetching technique. Specifically, I-SPY proposes context-driven conditional prefetching and prefetch coalescing. For nine data center applications, I-SPY provides an average of 15.5\% speedup and 95.9\% reduction in instruction cache misses outperforming the state-of-the-art prefetching technique by 22.5\%.}
 \cventry{2019-Present}{Performance Characteristics of Managed Workloads}{}{}{}{Many modern applications are written in managed code to achieve type safety, portability, security, and automatic memory management. While these features provide necessary abstractions for quick and safe software development, computer architectural aspects of these features are not well studied in the literature. In this study, we investigate the characteristics of these managed workloads. We identify the key bottlenecks that significantly hurt the performance of these workloads on modern hardware. We also correlate these bottlenecks on different aspects of managed runtime including common shared libraries, garbage collection, and just in time code generation.}
 \cventry{2018-Present}{Continuous Locality Optimization}{}{}{}{Locality of reference is a key factor affecting a program's performance. However, very few programs exhibit good data locality during execution. In this project, we propose Erie, the first methodology that can continuously monitor executions in production for locality optimizations, with negligible overhead and without requiring special hardware. Using a hybrid approach, Erie efficiently identifies locality problems in production, and addresses them in house. Erie can reason about how its optimizations affect unobserved executions, as well as their interaction with underlying hardware mechanisms. Our evaluation shows that Erie's overhead is less than 1.36\% on average, and its optimizations provide up to 53.14\% (16.83\% on average) speedup, compared to a baseline that uses the highest level of compiler optimization. Erie provides up to 17.48\% (6.64\% on average) speedup on PostgreSQL, one of the most popular open-source data-base management systems.}
 \cventry{2017-2019}{Automatic False Sharing Elimination}{}{}{}{Parallel programs on shared memory multiprocessors suffer from a slowdown of an order of magnitude due to false sharing. False sharing occurs when multiple threads demand exclusive access to a cache line even though their data locate on non-overlapping portions of the cache line. In this project, we proposed Huron, a hybrid in-house/in-production false sharing detection and repair system. Huron detects and repairs as much false sharing as it can in-house, and relies on its lightweight in-production mechanism for remaining cases. The key idea behind Huron's in-house false sharing repair is to group together data that is accessed by the same set of threads, to shift falsely-shared data to different cache lines. Huron's in-house repair technique can generalize to
-previously-unobserved inputs. Our evaluation shows that Huron can detect more false sharing bugs than all state-of-the-art techniques, and with a lower overhead. Huron improves runtime performance by 3.82$\times$ on average (up to 11$\times$), which is 2.11-2.27$\times$ better than the state of the art.}
+  previously-unobserved inputs. Our evaluation shows that Huron can detect more false sharing bugs than all state-of-the-art techniques, and with a lower overhead. Huron improves runtime performance by 3.82$\times$ on average (up to 11$\times$), which is 2.11-2.27$\times$ better than the state of the art.}
 %\cventry{2017-2018}{Feedback Directed Parallelization for Heterogeneous Systems}{}{}{}{Assigning computations to the correct processing unit is difficult because performance on heterogeneous systems maybe dominated by subtle effects that are hard to measure or anticipate through static analysis. In this project, we leveraged performance monitoring unit counters  to predict a computation's performance on different machines.}
 \cventry{2013-2017}{Performance Analysis for Multi-Radio Cognitive Radio Networks}{}{}{}{In this project, we analyzed several performance metrics (throughput, delay, packet-loss, etc.) in multi-radio cognitive radio networks. Consequently, we proposed a feedback-based multi-radio exploitation approach to overcome throughput degradation in multi-radio cognitive
-radio networks.}
+  radio networks.}
 
-\section{Selected Course Projects}
+%\section{Selected Course Projects}
 
-\cvitem{-}{Implementation of Machine Learning Algorithms (Decision tree, K-nearest neighbor, Bayesian inference, Neural networks) from scratch.}
-\cvitem{-}{Compiler for a Subset of Pascal Language.}
+%\cvitem{-}{Implementation of Machine Learning Algorithms (Decision tree, K-nearest neighbor, Bayesian inference, Neural networks) from scratch.}
+%\cvitem{-}{Compiler for a Subset of Pascal Language.}
 %\cvitem{-}{Saint Basil's Cathedral using OpenGL.}
-\cvitem{-}{Implementation of OSI Layers over simulated Physical layer written in Java.}
-\cvitem{-}{Complete hardware implementation of a two-stage pipelined, micro-programmed microprocessor supporting 28 basic instructions.}
+%\cvitem{-}{Implementation of OSI Layers over simulated Physical layer written in Java.}
+%\cvitem{-}{Complete hardware implementation of a two-stage pipelined, micro-programmed microprocessor supporting 28 basic instructions.}
 
-\section{Industry Research Collaboration}
+%\section{Industry Research Collaboration}
 
-\cventry{2016-2017}{Fraud Detection on Mobile Advertisement}{}{}{}{In collaboration with Widespace.}
-\cventry{2015-2017}{Early Detection of Terrorism from Social Media}{}{}{}{In collaboration with Infinity Technology and Bangladesh Police.}
-\cventry{2015-2016}{Target Audience Finding in Internet Advertisement}{}{}{}{In collaboration with Mindshare Bangladesh.}
+%\cventry{2016-2017}{Fraud Detection on Mobile Advertisement}{}{}{}{In collaboration with Widespace.}
+%\cventry{2015-2017}{Early Detection of Terrorism from Social Media}{}{}{}{In collaboration with Infinity Technology and Bangladesh Police.}
+%\cventry{2015-2016}{Target Audience Finding in Internet Advertisement}{}{}{}{In collaboration with Mindshare Bangladesh.}
 
 \section{Professional Services}
+\cvitem{-}{External Review Committee Member for ASPLOS 2021}
 \cvitem{-}{Artifact Evaluation Committee Member for PLDI 2020, MLSys 2020, ASPLOS 2020, SOSP 2019}
 \cvitem{-}{Student Volunteer for PLDI 2019}
 \cvitem{-}{Data Center Consultation for NCC Bank, NRB Commercial Bank, Bangladesh Police.}
@@ -173,7 +185,7 @@ radio networks.}
 \cvitem{-}{Member of Board of Undergraduate Studies, Self-Assessment Committee, Departmental Security Cell, Under-graduate Admission Programming Committee, Bureau of Research, Testing and Consultation Team, Dept. of Computer Science and Engineering, Bangladesh University of Engineering and Technology.}
 
 \section{Research Mentoring}
-\cvitem{Undergraduate}{Yifan Zhao, Shariq Hafeez, Zhiqi Chen, Jeremiah Dunne, Nathan Brown, Morgan Borjigin-Wang, Ashfaqur Rahaman}
+\cvitem{Undergraduate}{Yifan Zhao, Nathan Brown, Ashfaqur Rahaman, Yuhan Chen, Yineng Yan, Dexin Zhang}
 
 \section{Technical Skills}
 \cvitem{Languages}{C, C++, Java, x86 Assembly, PL/SQL, Tcl, Python, HTML, CSS, JavaScript, PHP, Shell script, Prolog.}
