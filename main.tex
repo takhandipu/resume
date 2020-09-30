@@ -67,7 +67,9 @@
 
 \section{Research Interests}
 
-\cvitem{}{My research interest lies in the intersection of compiler, operating systems, and computer architecture.}
+%\cvitem{}{My research interest lies in the intersection of compiler, operating systems, and computer architecture.}
+\cvitem{Areas}{Compiler, Operating Systems, Computer Architecture}
+\cvitem{Topics}{Profile-guided Optimization, Locality Optimization, Prefetching}
 
 \section{Education}
 
@@ -138,12 +140,12 @@
 \fi
 
 \section{Talks}
-\cventry{}{Huron: Hybrid False Sharing Detection and Repair}{}{}{}{}
+\cventry{2019}{Huron: Hybrid False Sharing Detection and Repair}{}{}{}{}
 \cvlistitem{Microsoft C++ Team, August 2019}{}
 \cvlistitem{ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI), June 2019}{}
 \cvlistitem{Azure Hardware Research Group, May 2019}{}
 
-\cventry{}{Overcoming Throughput Degradation in Multi-Radio Cognitive Radio Networks}{}{}{}{}
+\cventry{2018}{Overcoming Throughput Degradation in Multi-Radio Cognitive Radio Networks}{}{}{}{}
 \cvlistitem{Intel Labs Wireless Networking Research Group, May 2018}{}
 
 \newpage
@@ -153,11 +155,9 @@
 \cventry{2019-Present}{Context-Driven Conditional Instruction Prefetching with Coalescing for Data Center Applications}{}{}{}{Modern data center applications exhibit large instruction footprints, leading to frequent instruction cache misses increasing cost and degrading data center performance and energy efficiency. To overcome this performance degradation via prefetching, we first investigate the challenges of effective instruction prefetching. We then use insights derived from our investigation to develop I-SPY, a novel profile-guided prefetching technique. Specifically, I-SPY proposes context-driven conditional prefetching and prefetch coalescing. For nine data center applications, I-SPY provides an average of 15.5\% speedup and 95.9\% reduction in instruction cache misses outperforming the state-of-the-art prefetching technique by 22.5\%.}
 \cventry{2019-Present}{Performance Characteristics of Managed Workloads}{}{}{}{Many modern applications are written in managed code to achieve type safety, portability, security, and automatic memory management. While these features provide necessary abstractions for quick and safe software development, computer architectural aspects of these features are not well studied in the literature. In this study, we investigate the characteristics of these managed workloads. We identify the key bottlenecks that significantly hurt the performance of these workloads on modern hardware. We also correlate these bottlenecks on different aspects of managed runtime including common shared libraries, garbage collection, and just in time code generation.}
 \cventry{2018-Present}{Continuous Locality Optimization}{}{}{}{Locality of reference is a key factor affecting a program's performance. However, very few programs exhibit good data locality during execution. In this project, we propose Erie, the first methodology that can continuously monitor executions in production for locality optimizations, with negligible overhead and without requiring special hardware. Using a hybrid approach, Erie efficiently identifies locality problems in production, and addresses them in house. Erie can reason about how its optimizations affect unobserved executions, as well as their interaction with underlying hardware mechanisms. Our evaluation shows that Erie's overhead is less than 1.36\% on average, and its optimizations provide up to 53.14\% (16.83\% on average) speedup, compared to a baseline that uses the highest level of compiler optimization. Erie provides up to 17.48\% (6.64\% on average) speedup on PostgreSQL, one of the most popular open-source data-base management systems.}
-\cventry{2017-2019}{Automatic False Sharing Elimination}{}{}{}{Parallel programs on shared memory multiprocessors suffer from a slowdown of an order of magnitude due to false sharing. False sharing occurs when multiple threads demand exclusive access to a cache line even though their data locate on non-overlapping portions of the cache line. In this project, we proposed Huron, a hybrid in-house/in-production false sharing detection and repair system. Huron detects and repairs as much false sharing as it can in-house, and relies on its lightweight in-production mechanism for remaining cases. The key idea behind Huron's in-house false sharing repair is to group together data that is accessed by the same set of threads, to shift falsely-shared data to different cache lines. Huron's in-house repair technique can generalize to
-  previously-unobserved inputs. Our evaluation shows that Huron can detect more false sharing bugs than all state-of-the-art techniques, and with a lower overhead. Huron improves runtime performance by 3.82$\times$ on average (up to 11$\times$), which is 2.11-2.27$\times$ better than the state of the art.}
+\cventry{2017-2019}{Automatic False Sharing Elimination}{}{}{}{Parallel programs on shared memory multiprocessors suffer from a slowdown of an order of magnitude due to false sharing. False sharing occurs when multiple threads demand exclusive access to a cache line even though their data locate on non-overlapping portions of the cache line. In this project, we proposed Huron, a hybrid in-house/in-production false sharing detection and repair system. Huron detects and repairs as much false sharing as it can in-house, and relies on its lightweight in-production mechanism for remaining cases. The key idea behind Huron's in-house false sharing repair is to group together data that is accessed by the same set of threads, to shift falsely-shared data to different cache lines. Huron's in-house repair technique can generalize to previously-unobserved inputs. Our evaluation shows that Huron can detect more false sharing bugs than all state-of-the-art techniques, and with a lower overhead. Huron improves runtime performance by 3.82$\times$ on average (up to 11$\times$), which is 2.11-2.27$\times$ better than the state of the art.}
 %\cventry{2017-2018}{Feedback Directed Parallelization for Heterogeneous Systems}{}{}{}{Assigning computations to the correct processing unit is difficult because performance on heterogeneous systems maybe dominated by subtle effects that are hard to measure or anticipate through static analysis. In this project, we leveraged performance monitoring unit counters  to predict a computation's performance on different machines.}
-\cventry{2013-2017}{Performance Analysis for Multi-Radio Cognitive Radio Networks}{}{}{}{In this project, we analyzed several performance metrics (throughput, delay, packet-loss, etc.) in multi-radio cognitive radio networks. Consequently, we proposed a feedback-based multi-radio exploitation approach to overcome throughput degradation in multi-radio cognitive
-  radio networks.}
+\cventry{2013-2017}{Performance Analysis for Multi-Radio Cognitive Radio Networks}{}{}{}{In this project, we analyzed several performance metrics (throughput, delay, packet-loss, etc.) in multi-radio cognitive radio networks. Consequently, we proposed a feedback-based multi-radio exploitation approach to overcome throughput degradation in multi-radio cognitive radio networks.}
 
 %\section{Selected Course Projects}
 
@@ -173,19 +173,39 @@
 %\cventry{2015-2017}{Early Detection of Terrorism from Social Media}{}{}{}{In collaboration with Infinity Technology and Bangladesh Police.}
 %\cventry{2015-2016}{Target Audience Finding in Internet Advertisement}{}{}{}{In collaboration with Mindshare Bangladesh.}
 
-\section{Professional Services}
-\cvitem{-}{External Review Committee Member for ASPLOS 2021}
-\cvitem{-}{Artifact Evaluation Committee Member for PLDI 2020, MLSys 2020, ASPLOS 2020, SOSP 2019}
-\cvitem{-}{Student Volunteer for PLDI 2019}
-\cvitem{-}{Data Center Consultation for NCC Bank, NRB Commercial Bank, Bangladesh Police.}
-\cvitem{-}{Web Application Security Assessment \& Load Testing for Bangladesh Hajj Pre-registration Server.}
-\cvitem{-}{Organizing Committee Member for NSysS 2016, WALCOM 2015, NSysS 2015.}
-\cvitem{-}{Online Result Processing for Country-wide Election for The Institution of Engineers, Bangladesh (IEB).}
-\cvitem{-}{Fraudulent Transaction Investigation for Sonali Bank Bangladesh.}
-\cvitem{-}{Member of Board of Undergraduate Studies, Self-Assessment Committee, Departmental Security Cell, Under-graduate Admission Programming Committee, Bureau of Research, Testing and Consultation Team, Dept. of Computer Science and Engineering, Bangladesh University of Engineering and Technology.}
+\section{Selected Services}
+\cvitem{2021}{External Review Committee Member for ASPLOS'21, Shadow Program Committee Member for EuroSys'21}
+\cvitem{2020}{Artifact Evaluation Committee Member for PLDI'20, MLSys'20, and ASPLOS'20}
+\cvitem{2019}{Artifact Evaluation Committee Member for SOSP'19, Student Volunteer for PLDI'19}
+%\cvitem{ASPLOS'21}{External Review Committee Member}
+%\cvitem{EuroSys'21}{Shadow Program Committee Member}
+%\cvitem{PLDI'20}{Artifact Evaluation Committee Member}
+%\cvitem{MLSys'20}{Artifact Evaluation Committee Member}
+%\cvitem{ASPLOS'20}{Artifact Evaluation Committee Member}
+%\cvitem{SOSP'19}{Artifact Evaluation Committee Member}
+%\cvitem{PLDI'19}{Student Volunteer}
 
-\section{Research Mentoring}
-\cvitem{Undergraduate}{Yifan Zhao, Nathan Brown, Ashfaqur Rahaman, Yuhan Chen, Yineng Yan, Dexin Zhang}
+%\cvitem{-}{Data Center Consultation for NCC Bank, NRB Commercial Bank, Bangladesh Police.}
+%\cvitem{-}{Web Application Security Assessment \& Load Testing for Bangladesh Hajj Pre-registration Server.}
+%\cvitem{-}{Organizing Committee Member for NSysS 2016, WALCOM 2015, NSysS 2015.}
+%\cvitem{-}{Online Result Processing for Country-wide Election for The Institution of Engineers, Bangladesh (IEB).}
+%\cvitem{-}{Fraudulent Transaction Investigation for Sonali Bank Bangladesh.}
+%\cvitem{-}{Member of Board of Undergraduate Studies, Self-Assessment Committee, Departmental Security Cell, Under-graduate Admission Programming Committee, Bureau of Research, Testing and Consultation Team, Dept. of Computer Science and Engineering, Bangladesh University of Engineering and Technology.}
+
+\section{Grants}
+\cvitem{2020}{Taming the Instruction Bottleneck in Modern Datacenter Applications}
+\cvlistitem{Principal Investigators: Baris Kasikci and Joseph Devietti}
+\cvlistitem{Organization: NSF/Intel Partnership on Foundational Microarchitecture Research (FoMR)}
+
+\cvitem{2020}{Proxy-Web: A Proxy App Suite for Production Web Services}
+\cvlistitem{Principal Investigators: Baris Kasikci, Timothy Rogers, and David Brooks}
+\cvlistitem{Organization: Semiconductor Research Corporation (SRC)}
+
+\section{Selected Research Mentoring}
+\cvitem{2019-Present}{Nathan Brown, undergrad, first place in ACM undergraduate student research competition, CGO'20}
+\cvitem{2020-Present}{Yuhan Chen, PhD student, results published in IISWC'20}
+\cvitem{2018-19}{Yifan Zhao, undergrad (now a PhD student, UIUC), co-author of the PLDI'19 paper}
+%\cvitem{Undergraduate}{Yifan Zhao, Nathan Brown, Ashfaqur Rahaman, Yuhan Chen, Yineng Yan, Dexin Zhang}
 
 \section{Technical Skills}
 \cvitem{Languages}{C, C++, Java, x86 Assembly, PL/SQL, Tcl, Python, HTML, CSS, JavaScript, PHP, Shell script, Prolog.}
